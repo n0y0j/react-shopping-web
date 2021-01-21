@@ -27,8 +27,16 @@ function FileUpload() {
                     alert('파일 저장 실패')
                 }
             })
-
     }
+
+  const deleteHandler = (image) => {
+    const currentIndex = Images.indexOf(image)
+
+    let newImages = [...Images]
+    newImages.splice(currentIndex, 1)
+
+    setImages(newImages)
+  }
 
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -53,7 +61,7 @@ function FileUpload() {
       <div style={{ display: 'flex', width: '350px', height: '240px', overflow: 'scroll' }}>
           
           {Images.map((image, index) => (
-              <div key={index}>
+              <div onClick={() => deleteHandler(image)} key={index}>
                   <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={`http://localhost:5000/${image}`} />
               </div>
           ))}
