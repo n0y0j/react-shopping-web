@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Icon, Col, Card, Row } from 'antd';
 import ImageSlider from '../../utils/ImageSlider'
+import CheckBox from './Sections/CheckBox'
+import {continents} from './Sections/Datas'
 const { Meta } = Card;
 
 function LandingPage() {
@@ -74,6 +76,11 @@ function LandingPage() {
         </div>
 
         {/* Filter */}
+
+        {/* CheckBox */}
+        <CheckBox list={continents}/>
+
+        {/* RadioBox */}
 
         {/* Search */}
 
