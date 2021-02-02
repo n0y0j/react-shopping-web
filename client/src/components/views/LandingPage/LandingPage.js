@@ -32,9 +32,8 @@ function LandingPage() {
           <Meta title={product.title} description={`$${product.price}`} />
         </Card>
       </Col>
-
-      
     });
+
 
     const getProducts = (body) => {
         axios.post('api/product/products', body)
@@ -78,7 +77,7 @@ function LandingPage() {
         {/* Filter */}
 
         {/* CheckBox */}
-        <CheckBox list={continents}/>
+        <CheckBox list={continents} />
 
         {/* RadioBox */}
 
