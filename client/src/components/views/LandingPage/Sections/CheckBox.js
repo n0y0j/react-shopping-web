@@ -24,7 +24,7 @@ function CheckBox(props) {
       }
       
       setChecked(newChecked)
-  
+      props.handleFilters(newChecked)
     }
 
     const renderCheckboxLists = () => props.list && props.list.map((value, index) => (

@@ -23,6 +23,7 @@ const productSchema = mongoose.Schema({
    },
    continents: {
        type: Number,
+       default: 1
    },
    sold: {
        type: Number,
