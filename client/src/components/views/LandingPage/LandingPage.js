@@ -4,8 +4,10 @@ import { Icon, Col, Card, Row } from 'antd';
 import ImageSlider from '../../utils/ImageSlider'
 import CheckBox from './Sections/CheckBox'
 import RadioBox from './Sections/RadioBox'
+import SearchFeature from './Sections/SearchFeature'
 
 import {continents, price} from './Sections/Datas'
+import Search from 'antd/lib/input/Search';
 const { Meta } = Card;
 
 function LandingPage() {
@@ -18,6 +20,7 @@ function LandingPage() {
       continents: [],
       price: []
     })
+    const [SearchTerm, setSearchTerm] = useState("")
 
     useEffect(() => {
 
@@ -111,6 +114,10 @@ function LandingPage() {
         setSkip(skip)  
     }
 
+    const updateSearchTerm = (newSearchTerm) => {
+      setSearchTerm(newSearchTerm)
+    }
+
     return (
       <div style={{ width: "75%", margin: "3rem auto" }}>
         <div style={{ textAlign: "center" }}>
@@ -136,6 +143,12 @@ function LandingPage() {
         </Row>
 
         {/* Search */}
+        <div style={{ display:'flex', justifyContent:'flex-end', margin:'1rem'}}>
+        <SearchFeature
+          refreshFunction={updateSearchTerm}
+        />
+        </div>
+    
 
         {/* Cards */}
 
