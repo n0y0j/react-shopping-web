@@ -40,7 +40,7 @@ function CheckBox(props) {
             {renderCheckboxLists()}
           </Panel>
         </Collapse>
-        ,
+        
       </div>
     );
 }
