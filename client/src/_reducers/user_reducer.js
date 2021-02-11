@@ -36,8 +36,8 @@ export default function (state = {}, action) {
         cartDetail: action.payload.productInfo,
         userData: { ...state.userDate, cart: action.payload.cart },
       };
-      case ON_SUCCESS_BUY:
-        return { ...state }
+    case ON_SUCCESS_BUY:
+      return { ...state };
     default:
       return state;
   }
